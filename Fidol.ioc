@@ -318,4 +318,4 @@ VP_TIM2_VS_no_output1.Signal=TIM2_VS_no_output1
 VP_TIM2_VS_no_output2.Mode=PWM Generation2 No Output
 VP_TIM2_VS_no_output2.Signal=TIM2_VS_no_output2
 board=custom
-isbadioc=true
+isbadioc=false
