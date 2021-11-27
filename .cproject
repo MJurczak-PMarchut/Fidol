@@ -100,9 +100,9 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
+						<entry excluding="L9960T|ToF_sensors" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="SumoDrivers"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Core"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Drivers"/>
-						<entry excluding="L9960T|ToF_sensors" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name="SumoDrivers"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>

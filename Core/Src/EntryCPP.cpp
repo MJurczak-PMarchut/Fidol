@@ -23,10 +23,6 @@ extern DMA_HandleTypeDef hdma_uart4_tx;
 
 void main_cpp(void)
 {
-//	MessageInfoTypeDef msg = {0};
-//	msg.
-//	CommunicationManager.AttachCommInt(&huart4, &hdma_uart4_rx, &hdma_uart4_tx);
-//	CommunicationManager.PushCommRequestIntoQueue(MsgInfo)
 	Servos.AttachServo(SERVO03_GPIO_Port, SERVO03_Pin);
 	Servos.AttachServo(SERVO04_GPIO_Port, SERVO04_Pin);
 	Servos.AttachServo(SERVO12_GPIO_Port, SERVO12_Pin);
