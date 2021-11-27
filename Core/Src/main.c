@@ -261,7 +261,7 @@ static void MX_TIM2_Init(void)
 
   /* USER CODE END TIM2_Init 1 */
   htim2.Instance = TIM2;
-  htim2.Init.Prescaler = 399;
+  htim2.Init.Prescaler = 199;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim2.Init.Period = 2500;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
@@ -375,14 +375,14 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOD_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOE, SERVO06_Pin|SERVO07_Pin|SERVO08_Pin|SERVO15_Pin
-                          |SERVO09_Pin|SERVO05_Pin|SERVO04_Pin|SERVO03_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOE, SERVO03_Pin|SERVO04_Pin|SERVO05_Pin|SERVO06_Pin
+                          |SERVO08_Pin|SERVO09_Pin|SERVO10_Pin|SERVO11_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, SERVO10_Pin|SERVO14_Pin|SERVO13_Pin|SERVO12_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, SERVO07_Pin|SERVO12_Pin|SERVO13_Pin|SERVO14_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(SERVO11_GPIO_Port, SERVO11_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(SERVO15_GPIO_Port, SERVO15_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOC, SERVO16_Pin|SERVO17_Pin|SERVO00_Pin, GPIO_PIN_RESET);
@@ -390,28 +390,28 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOD, SERVO01_Pin|SERVO02_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : SERVO06_Pin SERVO07_Pin SERVO08_Pin SERVO15_Pin
-                           SERVO09_Pin SERVO05_Pin SERVO04_Pin SERVO03_Pin */
-  GPIO_InitStruct.Pin = SERVO06_Pin|SERVO07_Pin|SERVO08_Pin|SERVO15_Pin
-                          |SERVO09_Pin|SERVO05_Pin|SERVO04_Pin|SERVO03_Pin;
+  /*Configure GPIO pins : SERVO03_Pin SERVO04_Pin SERVO05_Pin SERVO06_Pin
+                           SERVO08_Pin SERVO09_Pin SERVO10_Pin SERVO11_Pin */
+  GPIO_InitStruct.Pin = SERVO03_Pin|SERVO04_Pin|SERVO05_Pin|SERVO06_Pin
+                          |SERVO08_Pin|SERVO09_Pin|SERVO10_Pin|SERVO11_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOE, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : SERVO10_Pin SERVO14_Pin SERVO13_Pin SERVO12_Pin */
-  GPIO_InitStruct.Pin = SERVO10_Pin|SERVO14_Pin|SERVO13_Pin|SERVO12_Pin;
+  /*Configure GPIO pins : SERVO07_Pin SERVO12_Pin SERVO13_Pin SERVO14_Pin */
+  GPIO_InitStruct.Pin = SERVO07_Pin|SERVO12_Pin|SERVO13_Pin|SERVO14_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : SERVO11_Pin */
-  GPIO_InitStruct.Pin = SERVO11_Pin;
+  /*Configure GPIO pin : SERVO15_Pin */
+  GPIO_InitStruct.Pin = SERVO15_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(SERVO11_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(SERVO15_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pins : SERVO16_Pin SERVO17_Pin SERVO00_Pin */
   GPIO_InitStruct.Pin = SERVO16_Pin|SERVO17_Pin|SERVO00_Pin;
